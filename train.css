@@ -1,0 +1,62 @@
+body {
+    
+    background-image: url("train2.jpg");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+.img1{
+    border: 1px solid rgb(98, 98, 231);
+    position: absolute;
+    left: 45px;
+    top: 45px;
+}
+.blue{
+    color: rgb(53, 53, 216);
+}
+.container {
+    background-color: antiquewhite;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    left: 700px;
+    top: 20px;
+}
+.om{
+    position: absolute;
+    left: 500px;
+    background-color: orange;
+    border: 2px solid rgb(224, 105, 31);
+}
+.om:hover{
+    background-color: rgb(144, 96, 8);
+}
+label {
+    font-weight: bold;
+}
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    background-color:rgb(41, 192, 41);
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid green;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #16691a;
+    
+}
+#prediction {
+    margin-top: 20px;
+    font-weight: bold;
+}

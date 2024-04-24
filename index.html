@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Arrival Prediction</title>
+    <link rel="stylesheet" href="train.css">
+    <!-- <script src="train.js"></script>
+     -->
+</head>
+<body>
+    <img class="img1" src="train1.jpg" alt="image" height="200px" width="200px">
+    <div class="container">
+        <h2 class="blue">Train Arrival Prediction</h2>
+        <label for="departure">Departure Station:</label>
+        <select id="departure">
+            <option value="From">From</option>
+            <option value="masur">masur</option>
+            <option value="targaon">targaon</option>
+            <!-- Add more options for other stations -->
+        </select>
+
+        <label for="arrival">Arrival Station:</label>
+        <select id="arrival">
+            <option value="To">To</option>
+            <option value="masur">masur</option>
+            <option value="targaon">targaon</option>
+        <!-- Add more options for other stations -->
+        </select>
+
+        <button class="btn1" onclick="predictTravelTime()">Predict Travel Time</button>
+        <button class="om">close</button>
+
+        <div id="prediction"></div>
+    </div>
+    <!-- start js code -->
+<script>
+    function predictTravelTime() {
+    var departure = document.getElementById("departure").value;
+    var arrival = document.getElementById("arrival").value;
+
+    var travelTimes = {
+        'masur-targaon': 50,
+        'targaon-masur': 50,
+        // Add more station pairs and their travel times as needed
+    };
+
+    var key = departure.toLowerCase() + '-' + arrival.toLowerCase();
+    var prediction = travelTimes[key];
+
+    if (prediction !== undefined) {
+        document.getElementById("prediction").innerText = "Predicted travel time from " + departure + " to " + arrival + ": " + prediction + " minutes";
+    } else {
+        document.getElementById("prediction").innerText = "Sorry, we don't have travel time information for that route.";
+    }
+}
+</script>
+
+</body>
+</html>
+
